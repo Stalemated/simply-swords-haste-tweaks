@@ -34,8 +34,8 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
 	// Dependencies
-	compileOnly "curse.maven:simply-swords-659887:${project.simply_swords_id}"
-	//modImplementation fileTree(dir: 'libs', include: ['*.jar'])
+	modImplementation "curse.maven:simply-swords-659887:${project.simply_swords_id}"
+	modImplementation fileTree(dir: 'libs', include: ['*.jar'])
 	
 }
 
