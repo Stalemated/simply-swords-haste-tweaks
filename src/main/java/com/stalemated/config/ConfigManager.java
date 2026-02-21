@@ -15,7 +15,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class ConfigManager {
-    public static final String MOD_ID = "simply-swords-haste-tweaks";
+    public static final String MOD_ID = "simply-swords-battle-standard-tweaks";
     private static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
     private final File file;

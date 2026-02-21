@@ -15,7 +15,7 @@ public class SimplySwordsBattleStandardConfig {
     public static int abyssalStandardAOESlownessAmplifier = 0;
 
     public static void load() {
-        ConfigManager config = new ConfigManager("simplyswords_main/haste_tweaks.json");
+        ConfigManager config = new ConfigManager("simplyswords_main/battle_standard_tweaks.json");
 
         galeforceHasteAmplifier = ((int) config.getOrDefault("galeforce_haste_amplifier", 7));
         galeforceHasteRadius = config.getOrDefault("galeforce_haste_radius", 3.0f);

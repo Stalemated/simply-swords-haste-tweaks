@@ -5,7 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class SimplySwordsBattleStandardTweaks implements ModInitializer {
-	public static final String MOD_ID = "simply-swords-haste-tweaks";
+	public static final String MOD_ID = "simply-swords-battle-standard-tweaks";
 
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
@@ -18,6 +18,6 @@ public class SimplySwordsBattleStandardTweaks implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 		SimplySwordsBattleStandardConfig.load();
-		LOGGER.info("Simply Swords Haste Tweaks loaded successfully!");
+		LOGGER.info("Simply Swords Battle Standard Tweaks loaded successfully!");
 	}
 }
