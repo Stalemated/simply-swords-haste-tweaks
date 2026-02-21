@@ -1,4 +1,4 @@
-package com.stalemated.config;
+package com.stalemated.simplyswordsbstweaks.config;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -58,6 +58,27 @@ public class ConfigManager {
 
                 if (element.isJsonPrimitive() && element.getAsJsonPrimitive().isNumber()) {
                     return element.getAsFloat();
+                }
+
+                LOGGER.warn("Invalid value type for key '{}', expected number. Resetting to default.", key);
+            } catch (Exception e) {
+                LOGGER.warn("Error parsing key '{}', resetting to default.", key);
+            }
+        } else {
+            LOGGER.warn("Key '{}' could not be found, adding it to the config file with default value.", key);
+        }
+
+        json.addProperty(key, defaultValue);
+        save();
+        return defaultValue;
+    }
+    public int getOrDefault(String key, int defaultValue) {
+        if (json.has(key)) {
+            try {
+                JsonElement element = json.get(key);
+
+                if (element.isJsonPrimitive() && element.getAsJsonPrimitive().isNumber()) {
+                    return element.getAsInt();
                 }
 
                 LOGGER.warn("Invalid value type for key '{}', expected number. Resetting to default.", key);

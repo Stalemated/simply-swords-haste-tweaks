@@ -16,7 +16,7 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.stalemated.SimplySwordsBattleStandardTweaks"
+			"com.stalemated.simplyswordsbstweaks.SimplySwordsBattleStandardTweaks"
 		]
 	},
 	"mixins": [

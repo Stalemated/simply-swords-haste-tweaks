@@ -1,10 +1,10 @@
-package com.stalemated.mixin;
+package com.stalemated.simplyswordsbstweaks.mixin;
 
 import net.sweenus.simplyswords.entity.BattleStandardDarkEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.*;
-import com.stalemated.SimplySwordsBattleStandardConfig;
+import com.stalemated.simplyswordsbstweaks.SimplySwordsBattleStandardConfig;
 
 @Mixin(BattleStandardDarkEntity.class)
 public class BattleStandardDarkEntityMixin {

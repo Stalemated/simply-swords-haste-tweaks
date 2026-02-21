@@ -1,4 +1,4 @@
-package com.stalemated;
+package com.stalemated.simplyswordsbstweaks;
 
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
