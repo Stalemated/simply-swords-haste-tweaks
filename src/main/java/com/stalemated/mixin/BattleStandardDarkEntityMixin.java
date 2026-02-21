@@ -4,7 +4,7 @@ import net.sweenus.simplyswords.entity.BattleStandardDarkEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.*;
-import com.stalemated.SimplySwordsHasteConfig;
+import com.stalemated.SimplySwordsBattleStandardConfig;
 
 @Mixin(BattleStandardDarkEntity.class)
 public class BattleStandardDarkEntityMixin {
@@ -21,9 +21,9 @@ public class BattleStandardDarkEntityMixin {
 	)
 	private int modifyHasteConstant(int originalValue) {
 		if (!standardType.equals("enigma")) {
-			return SimplySwordsHasteConfig.abyssalStandardHasteAmplifier;
+			return SimplySwordsBattleStandardConfig.abyssalStandardHasteAmplifier;
 		}
-		return SimplySwordsHasteConfig.galeforceHasteAmplifier;
+		return SimplySwordsBattleStandardConfig.galeforceHasteAmplifier;
 	}
 
 	// Modifies the haste radius for both Abyssal Standard and Galeforce
@@ -33,9 +33,9 @@ public class BattleStandardDarkEntityMixin {
 	)
 	private float modifyHasteRadius(float originalValue) {
 		if (!standardType.equals("enigma")) {
-			return SimplySwordsHasteConfig.abyssalStandardHasteRadius;
+			return SimplySwordsBattleStandardConfig.abyssalStandardHasteRadius;
 		}
-		return SimplySwordsHasteConfig.galeforceHasteRadius;
+		return SimplySwordsBattleStandardConfig.galeforceHasteRadius;
 	}
 
 	// Modifies Galeforce's magic damage value, keeps Abyssal Standard's value unchanged
@@ -51,7 +51,7 @@ public class BattleStandardDarkEntityMixin {
 		if (!standardType.equals("enigma")) {
 			return originalValue;
 		}
-		return SimplySwordsHasteConfig.galeforceDamage;
+		return SimplySwordsBattleStandardConfig.galeforceDamage;
 	}
 
 	// Modifies the pain amplifier for Galeforce (Abyssal Standard doesn't apply pain)
@@ -64,7 +64,7 @@ public class BattleStandardDarkEntityMixin {
 			index = 4
 	)
 	private int modifyPainAmplifier(int originalValue) {
-		return SimplySwordsHasteConfig.galeforcePainAmplifier;
+		return SimplySwordsBattleStandardConfig.galeforcePainAmplifier;
 	}
 
 	// The 2 next methods modify the AoE radius for both Abyssal Standard and Galeforce
@@ -74,14 +74,14 @@ public class BattleStandardDarkEntityMixin {
 			constant = @Constant(intValue = 6, ordinal = 1)
 	)
 	private int modifyAbyssalStandardAoeRadius(int constant) {
-		return SimplySwordsHasteConfig.abyssalStandardAOERadius;
+		return SimplySwordsBattleStandardConfig.abyssalStandardAOERadius;
 	}
 	@ModifyConstant(
 			method = "baseTick",
 			constant = @Constant(intValue = 2, ordinal = 0)
 	)
 	private int modifyGaleforceAoeRadius(int constant) {
-		return SimplySwordsHasteConfig.galeforceAOERadius;
+		return SimplySwordsBattleStandardConfig.galeforceAOERadius;
 	}
 
 	// Modifies the AoE haste amplifier for Abyssal Standard
@@ -93,7 +93,7 @@ public class BattleStandardDarkEntityMixin {
 			)
 	)
 	private int modifyAbyssalStandardAoeHasteAmplifier(int originalValue) {
-		return SimplySwordsHasteConfig.abyssalStandardAOEHasteAmplifier;
+		return SimplySwordsBattleStandardConfig.abyssalStandardAOEHasteAmplifier;
 	}
 
 	@ModifyConstant(
@@ -104,7 +104,7 @@ public class BattleStandardDarkEntityMixin {
 			)
 	)
 	private int modifyAbyssalStandardAoeSlownessAmplifier(int originalValue) {
-		return SimplySwordsHasteConfig.abyssalStandardAOEHasteAmplifier;
+		return SimplySwordsBattleStandardConfig.abyssalStandardAOEHasteAmplifier;
 	}
 
 }

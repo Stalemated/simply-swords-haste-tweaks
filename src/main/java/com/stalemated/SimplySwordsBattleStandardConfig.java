@@ -2,7 +2,7 @@ package com.stalemated;
 
 import com.stalemated.config.ConfigManager;
 
-public class SimplySwordsHasteConfig {
+public class SimplySwordsBattleStandardConfig {
     public static int galeforceHasteAmplifier = 7;
     public static int abyssalStandardHasteAmplifier = 7;
     public static float galeforceHasteRadius = 3.0f;

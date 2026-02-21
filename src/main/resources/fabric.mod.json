@@ -1,9 +1,9 @@
 {
 	"schemaVersion": 1,
-	"id": "simply-swords-haste-tweaks",
+	"id": "simply-swords-battle-standard-tweaks",
 	"version": "${version}",
-	"name": "Simply Swords Haste Tweaks",
-	"description": "Makes the haste effect from the Dark Battle Standard configurable",
+	"name": "Simply Swords Battle Standard Tweaks",
+	"description": "Makes most effects from the Dark Battle Standard configurable",
 	"authors": [
 		"Stalemated"
 	],
@@ -12,15 +12,15 @@
 		"sources": "https://github.com/Stalemated/simply-swords-haste-tweaks"
 	},
 	"license": "MIT",
-	"icon": "assets/simply-swords-haste-tweaks/icon.png",
+	"icon": "assets/simply-swords-battle-standard-tweaks/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.stalemated.SimplySwordsHasteTweaks"
+			"com.stalemated.SimplySwordsBattleStandardTweaks"
 		]
 	},
 	"mixins": [
-		"simply-swords-haste-tweaks.mixins.json"
+		"simply-swords-battle-standard-tweaks.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.18.3",
