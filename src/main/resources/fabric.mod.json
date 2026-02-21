@@ -3,13 +3,13 @@
 	"id": "simply-swords-haste-tweaks",
 	"version": "${version}",
 	"name": "Simply Swords Haste Tweaks",
-	"description": "",
+	"description": "Makes the haste effect from the Dark Battle Standard configurable",
 	"authors": [
 		"Stalemated"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "",
+		"sources": "https://github.com/Stalemated/simply-swords-haste-tweaks"
 	},
 	"license": "MIT",
 	"icon": "assets/simply-swords-haste-tweaks/icon.png",

@@ -3,7 +3,7 @@
 	"package": "com.stalemated.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"BattleStandardDarkEntityMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
