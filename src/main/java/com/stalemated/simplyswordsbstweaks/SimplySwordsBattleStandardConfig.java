@@ -13,6 +13,7 @@ public class SimplySwordsBattleStandardConfig {
     public static int galeforcePainAmplifier = 49;
     public static int galeforceAOERadius = 2;
     public static int abyssalStandardAOESlownessAmplifier = 0;
+    public static boolean bannerHealingAllowed = true;
 
     public static void load() {
         ConfigManager config = new ConfigManager("simplyswords_main/battle_standard_tweaks.json");
@@ -27,5 +28,6 @@ public class SimplySwordsBattleStandardConfig {
         abyssalStandardAOEHasteAmplifier = config.getOrDefault("abyssal_standard_aoe_haste_amplifier", 2);
         abyssalStandardAOERadius = config.getOrDefault("abyssal_standard_aoe_radius", 6);
         abyssalStandardAOESlownessAmplifier = config.getOrDefault("abyssal_standard_aoe_slowness_amplifier", 0);
+        bannerHealingAllowed = config.getOrDefault("banner_healing_allowed", true);
     }
 }

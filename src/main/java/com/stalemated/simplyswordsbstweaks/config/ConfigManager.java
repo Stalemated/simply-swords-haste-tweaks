@@ -93,4 +93,26 @@ public class ConfigManager {
         save();
         return defaultValue;
     }
+    public boolean getOrDefault(String key, boolean defaultValue) {
+        if (json.has(key)) {
+            try {
+                JsonElement element = json.get(key);
+
+                if (element.isJsonPrimitive() && element.getAsJsonPrimitive().isBoolean()) {
+                    return element.getAsBoolean();
+                }
+
+                LOGGER.warn("Invalid value type for key '{}', expected boolean. Resetting to default.", key);
+            } catch (Exception e) {
+                LOGGER.warn("Error parsing key '{}', resetting to default.", key);
+            }
+        } else {
+            LOGGER.warn("Key '{}' could not be found, adding it to the config file with default value.", key);
+        }
+
+        json.addProperty(key, defaultValue);
+        save();
+        return defaultValue;
+    }
+
 }
