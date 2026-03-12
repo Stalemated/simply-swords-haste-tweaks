@@ -1,7 +1,7 @@
 package com.stalemated.simplyswordsbstweaks.compat;
 
 import net.fabricmc.loader.api.FabricLoader;
-import static com.stalemated.simplyswordsbstweaks.SimplySwordsBattleStandardTweaks.LOGGER;
+//import static com.stalemated.simplyswordsbstweaks.SimplySwordsBattleStandardTweaks.LOGGER;
 import java.lang.reflect.Field;
 
 public class RebalanceCompatHelper {
@@ -34,7 +34,7 @@ public class RebalanceCompatHelper {
                 globalStartField = configClass.getField("global_reduction_start");
 
                 hasRebalance = true;
-                LOGGER.info("Successfully hooked into ReBalance config for Battle Standards.");
+                //LOGGER.info("Successfully hooked into ReBalance config for Battle Standards.");
             } catch (Exception e) {
                 hasRebalance = false;
             }
@@ -46,7 +46,7 @@ public class RebalanceCompatHelper {
 
         try {
             float newAmount = damage;
-            LOGGER.info("Initial damage: {}", damage);
+            //LOGGER.info("Initial damage: {}", damage);
             boolean enableGlobal = enableGlobalField.getBoolean(configInstance);
             boolean enablePvp = enablePvpField.getBoolean(configInstance);
             float globalStart = globalStartField.getFloat(configInstance);
@@ -55,13 +55,13 @@ public class RebalanceCompatHelper {
                 float globalMultiplier = globalMultiplierField.getFloat(configInstance);
                 newAmount *= globalMultiplier;
                 newAmount += globalStart;
-                LOGGER.info("New global damage: {}", newAmount);
+                //LOGGER.info("New global damage: {}", newAmount);
             }
 
             if (enablePvp) {
                 float pvpMultiplier = pvpMultiplierField.getFloat(configInstance);
                 newAmount *= pvpMultiplier;
-                LOGGER.info("New pvp damage: {}", newAmount);
+                //LOGGER.info("New pvp damage: {}", newAmount);
             }
 
             return newAmount;
